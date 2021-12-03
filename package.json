@@ -1,0 +1,14 @@
+{
+  "name": "proyfact",
+  "version": "1.0.0",
+  "description": "Prototio facturación ventas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "fraedma",
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^2.6.14"
+  }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestón de Poductos</title>
+    <style>
+        body {
+            background-color: beige;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20;
+            font-style: oblique;
+        }
+    </style>
+    <nav>
+        <a href="./gestionProducto.html">Gestión Productos</a>|
+        <a href="./gestionClientes.html">Getión de Clientes</a>|
+        <a href="./facturacion.html">Facturación</a> |
+    </nav>
+</head>
+
+<body>
+    <main>
+        <center>
+            <h1>GESTION DE PRODUCTOS</h1>
+            <hr noshade="noshade" color="green" size="3" width="80%" />
+            <br />
+            <h2>Lista Productos</h2>
+            <br /> productos en Existencia
+            <select v-model="prodSelecc">
+          <option v-for="objprod in myArrayProd" v-bind:value="objprod.codProd">
+            {{objprod.nomProd}}
+          </option>
+        
+          <table border="5">
+                    <th>Cantidad En Existencia</th>
+                    <th>Precio de Venta</th>
+                    <tbody>
+                        <tr v-for="myArrayProd">
+                            <td>{{myArrayProd.cantExistencia}}</td>
+                            <td>{{myArrayProd.precioVta}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+        </select>
+        </center>
+        <br />
+        <hr noshade="noshade" color="green" size="3" width="80%" />
+        <br />
+        <pre>{{$data}}</pre>
+    </main>
+</body>
+<script src="node_modules/vue//dist/vue.js"></script>
+<script src="codigo.js"></script>
+
+</html>
